@@ -2,6 +2,20 @@ var idGenerator = require('./id_generator.js');
 
 var TodoStore = function() {
 	this.todos = {};
+
+	// Pre-initialized store with fake lists
+	this.todos["fake1"] = {
+		"items":[
+			{"done":true,"message":"Test Item1"},
+			{"done":false,"message":"Test item2"}
+		],
+		"id": "fake1"
+	};
+
+	this.todos["fake2"] = {
+		"items":[],
+		"id": "fake2"
+	};
 };
 
 TodoStore.prototype.getAll = function(callback) {

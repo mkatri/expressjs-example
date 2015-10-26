@@ -1,0 +1,22 @@
+{
+  "name": "ExpressDemo",
+  "version": "0.0.0",
+  "description": "Example of using Express to create a RESTful API with Node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mkatri/expressjs-example.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mkatri/expressjs-example/issues"
+  },
+  "dependencies": {
+    "express": "~4.13.3",
+    "body-parser": "~1.14.1"
+  }
+}

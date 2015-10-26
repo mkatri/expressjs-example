@@ -10,6 +10,7 @@ The reference code provided is under `services/todo.js`.
 
 Instead of using Google App Engine for storage, this example uses mock storage
 services that export an API similar to TD#5's Store interface: `getAll`, `get` and `save`.
+
 One way that this API differs, however, from TD#5's Store is that its functions
 are non-blocking: (i.e.) they return immediately without waiting for any underlying I/O ops to complete.
 Instead, these functions follow the JavaScirpt asynchronous tradition:

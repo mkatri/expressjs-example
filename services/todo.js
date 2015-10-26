@@ -25,11 +25,16 @@ module.exports.LinkApp = function(app) {
 	});
 
 	app.put('/api/todo-lists/:id', function(req, res) {
-		var list = req.body;
-		if (!list) return res.sendStatus(400);
-		todoStore.save(list, function(list, error) {
+		var listId = req.params.id;
+		var listUpdate = req.body;
+		if (!listUpdate) return res.sendStatus(400);
+		todoStore.get(listId, function(list, error) {
 			if (error) return res.sendStatus(400);
-			res.json(list);
+			listUpdate.id = list.id;
+			todoStore.save(listUpdate, function(list, error) {
+				if (error) return res.sendStatus(400);
+				res.json(list);
+			});
 		});
 	});
 };

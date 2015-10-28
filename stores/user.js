@@ -7,7 +7,7 @@ var UserStore = function() {
 UserStore.prototype.getAll = function(callback) {
 	var userArray = new Array();
 	for(var userId in this.users) {
-		userArray.push(this.user[userId]);
+		userArray.push(this.users[userId]);
 	}
 	callback(userArray);
 };
